@@ -8,20 +8,30 @@ public class Cat extends Pet {
      * @param name name of this Cat
      * @param age age of this Cat
      */
+    public Cat() {
+    }
+
+
     public Cat(String name, Integer age) {
 
+        super("Cat name", 0);
     }
 
     /**
      * @param age age of this Cat
      */
     public Cat(Integer age) {
+
+        super("Cat name", 0);
+
     }
 
     /**
      * @param name name of this Cat
      */
-    public Cat(String name) {
+    public Cat(String name)
+    {
+        super("Name of Cat");
 
     }
 
@@ -31,8 +41,7 @@ public class Cat extends Pet {
      * name is CatName
      * age is 0
      */
-    public Cat() {
-    }
+
 
     /**
      * @return meow as a string

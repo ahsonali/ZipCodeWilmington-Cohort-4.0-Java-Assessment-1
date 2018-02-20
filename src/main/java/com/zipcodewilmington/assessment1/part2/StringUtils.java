@@ -11,7 +11,11 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+
+        String [] array = sentence.split(" ");
+
+
+        return array;
     }
 
 
@@ -21,7 +25,11 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+
+        String [] array = sentence.split(" ");
+        String firstWord = array[0];
+
+        return firstWord;
     }
 
     /**
@@ -30,7 +38,17 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+
+        String[] array = sentence.split(" ");
+        String firstWord = array[0];
+
+        StringBuilder sb = new StringBuilder(firstWord);
+
+        String reversed = sb.reverse().toString();
+
+        return reversed;
+
+
     }
 
     /**
@@ -39,7 +57,22 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+
+
+
+        String[] anArray = sentence.split(" ");
+        String theFirstWord = anArray[0];
+
+        StringBuilder sb = new StringBuilder(theFirstWord);
+
+        String reversed = sb.reverse().toString();
+
+        String theCapitalLetter = reversed.substring(0, 1).toUpperCase();
+
+        String theSuffix = reversed.substring(1, reversed.length());
+
+
+        return theCapitalLetter + theSuffix;
     }
 
 
@@ -49,8 +82,16 @@ public class StringUtils {
      * @return string with identical contents, excluding the character at the specified index
      * given a string and index, return an identical string excluding the character at the specified index
      */
-    public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+    public static String removeCharacterAtIndex(String str, int index)
+    {
+        String firstHalf = str.substring(0, index).toString();
+        String secondHalf = str.substring(index + 1, str.length()).toString();
+
+        return firstHalf + secondHalf;
+
+        //char [] anArray = str.toCharArray();
+
+
     }
 
 }

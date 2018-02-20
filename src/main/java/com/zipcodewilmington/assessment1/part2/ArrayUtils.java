@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -10,8 +12,17 @@ public class ArrayUtils {
      * @return the number of times the specified `value` occurs in the specified `objectArray`
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
-    public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+    public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount)
+    {
+        int count = 0;
+        for (int i = 0; i < objectArray.length; i++)
+        {
+            if (objectToCount.equals(objectArray[i]))
+            {
+                count++;
+            }
+        }
+        return count;
     }
 
     /**
@@ -20,8 +31,34 @@ public class ArrayUtils {
      * @return an array with identical content excluding the specified `objectToRemove`
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
-    public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+    public static Object[] removeValue(Object[] objectArray, Object objectToRemove)
+    {
+        int count = 0;
+        int goodValues = 0;
+
+        //Loop through each index of object array
+        for (int i = 0; i < objectArray.length; i++)
+        {
+            //if index is equal to object to remove, count it.
+            if (objectArray[i].equals(objectToRemove))
+            {
+                count++;
+
+            }
+        }
+
+        Object [] newArray = new Object[objectArray.length - count];
+
+        for (int j = 0; j < objectArray.length; j++)
+        {
+            if(!objectArray[j].equals(objectToRemove))
+            {
+                newArray[goodValues] = objectArray[j];
+                goodValues++;
+            }
+        }
+
+        return newArray;
     }
 
     /**
@@ -29,7 +66,11 @@ public class ArrayUtils {
      * @return the most frequently occurring object in the array
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
-    public static Object getMostCommon(Object[] objectArray) {
+    public static Object getMostCommon(Object[] objectArray)
+    {
+
+
+
         return null;
     }
 
