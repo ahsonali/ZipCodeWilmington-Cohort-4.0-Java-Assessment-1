@@ -52,7 +52,7 @@ public class IntegerUtils {
 
         for (int i = val; i != 0; i/=10)
         {
-            resultNumber = resultNumber * 10 + i % 10;
+            resultNumber = resultNumber * 10 +i % 10;
         }
 
         return resultNumber;

@@ -67,7 +67,7 @@ public class PetOwnerTest {
 
         // Then
         Assert.assertEquals(expected, actual);
-    }
+    }///////////////////////////////////////////////////////////////////////////
 
     @Test
     public void isOwnerOfTest() {
@@ -84,7 +84,7 @@ public class PetOwnerTest {
         Assert.assertTrue(outcome);
         Assert.assertFalse(poOwnsAnotherPet);
     }
-
+//-----------------------------------------------------------------
 
     @Test
     public void getYoungestPetAgeTest() {
@@ -101,7 +101,7 @@ public class PetOwnerTest {
         Assert.assertEquals(expected, actual);
 
     }
-
+//-----------------------------------------------------------------------------
     @Test
     public void getOldestPetAgeTest() {
         // Given
@@ -116,7 +116,7 @@ public class PetOwnerTest {
         // Then
         Assert.assertEquals(expected, actual);
     }
-
+//--------------------------------------------------------------------------------
     @Test
     public void getAveragePetAgeTest() {
         // Given
@@ -131,6 +131,8 @@ public class PetOwnerTest {
         // Then
         Assert.assertEquals(expected, actual, 0.05);
     }
+
+//-------------------------------------------------------------------------------
 
     @Test
     public void getNumberOfPetsTest() {
@@ -147,6 +149,7 @@ public class PetOwnerTest {
         Assert.assertEquals(expected, actual);
     }
 
+//--------------------------------------------------------------------------------
     @Test
     public void getNameTest() {
         // Given
@@ -160,6 +163,7 @@ public class PetOwnerTest {
         Assert.assertEquals(expected, actual);
     }
 
+//---------------------------------------------------------------------------------
     @Test
     public void getPets() {
         // Given
@@ -175,4 +179,6 @@ public class PetOwnerTest {
             Assert.assertTrue(petList.contains(pet));
         }
     }
+
+//-----------------------------------------------------------------------------------
 }

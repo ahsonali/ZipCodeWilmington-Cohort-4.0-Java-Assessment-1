@@ -29,9 +29,9 @@ public class IntegerArrayUtils {
     {
         int product = 1;
 
-        for (int i = 1; i <= intArray.length; i++)
+        for (int i = 1; i < intArray.length; i++)
         {
-            product *= i;
+            product = product * intArray[i];
 
         }
         return product;

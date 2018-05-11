@@ -29,10 +29,11 @@ public class BasicStringUtils {
      */
     public static String reverse(String str) {
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(str);
 
 
-        return new StringBuilder(str).reverse().toString();
+        return sb.reverse().toString();
+
     }
 
     /**
@@ -42,10 +43,15 @@ public class BasicStringUtils {
     public static String reverseThenCamelCase(String str)
     {
         String reverseIt = reverse(str);
-        String upperCase = reverseIt.substring(0,1).toUpperCase();
-        String suffix = reverseIt.substring(1);
+        String firstLetter = reverseIt.substring(0, 1);
+        String firstLetterCapital = firstLetter.toUpperCase();
 
-        return upperCase + suffix;
+        //String upperCase = reverseIt.substring(0,1).toUpperCase();
+        String suffix = reverseIt.substring(1);
+        String reversedAndCapital = firstLetterCapital + suffix;
+
+
+        return reversedAndCapital;
 
     }
 

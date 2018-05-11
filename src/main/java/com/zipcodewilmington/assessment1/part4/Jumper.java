@@ -5,9 +5,9 @@ public class Jumper {
     /*
      * Complete the function below.
      */
-    public int jumps(int k, int j)
+    public int jumps(int distanceToFlag, int jumpDistance)
     {
 
-        return -1;
+        return (distanceToFlag / jumpDistance) + distanceToFlag % jumpDistance;
     }
 }

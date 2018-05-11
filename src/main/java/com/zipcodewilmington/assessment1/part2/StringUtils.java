@@ -26,8 +26,8 @@ public class StringUtils {
      */
     public static String getFirstWord(String sentence) {
 
-        String [] array = sentence.split(" ");
-        String firstWord = array[0];
+        //String [] array = sentence.split(" ");
+        String firstWord = getWords(sentence)[0];
 
         return firstWord;
     }
@@ -39,14 +39,20 @@ public class StringUtils {
      */
     public static String reverseFirstWord(String sentence) {
 
-        String[] array = sentence.split(" ");
-        String firstWord = array[0];
+//        String[] array = sentence.split(" ");
+//        String firstWord = array[0];
+//
+//        StringBuilder sb = new StringBuilder(firstWord);
+//
+//        String reversed = sb.reverse().toString();
+//
+//        return reversed;
 
-        StringBuilder sb = new StringBuilder(firstWord);
+        String firstWordToReverse = getFirstWord(sentence);
+        StringBuilder sb = new StringBuilder(firstWordToReverse);
+        String firstWordNowReversed = sb.reverse().toString();
 
-        String reversed = sb.reverse().toString();
-
-        return reversed;
+        return firstWordNowReversed;
 
 
     }
@@ -59,21 +65,45 @@ public class StringUtils {
     public static String reverseFirstWordThenCamelCase(String sentence) {
 
 
+//        String[] anArray = sentence.split(" ");
+//        String theFirstWord = anArray[0];
+//
+//        StringBuilder sb = new StringBuilder(theFirstWord);
+//
+//        String reversed = sb.reverse().toString();
+//
+//        String theCapitalLetter = reversed.substring(0, 1).toUpperCase();
+//
+//        String theSuffix = reversed.substring(1, reversed.length());
+//
+//        return theCapitalLetter + theSuffix;
+//    }
 
-        String[] anArray = sentence.split(" ");
-        String theFirstWord = anArray[0];
+        String firstWordToReverseThenCapitalize = reverseFirstWord(sentence);
+        String capital = firstWordToReverseThenCapitalize.substring(0, 1).toUpperCase();
+        String suffix = firstWordToReverseThenCapitalize.substring(1);
+        String result = capital + suffix;
 
-        StringBuilder sb = new StringBuilder(theFirstWord);
+        return result;
 
-        String reversed = sb.reverse().toString();
-
-        String theCapitalLetter = reversed.substring(0, 1).toUpperCase();
-
-        String theSuffix = reversed.substring(1, reversed.length());
-
-
-        return theCapitalLetter + theSuffix;
     }
+//
+//        for (int i = 0; i <= sentence.length(); i++)
+//        {
+//            if (firstWordToReverseThenCapitalize.substring(0,1).equals(firstWordToReverseThenCapitalize.substring(0, 1).toUpperCase()))
+//            {
+//                return firstWordToReverseThenCapitalize.substring(0,1).toLowerCase() + suffix;
+//
+//            }
+//            else if (firstWordToReverseThenCapitalize.substring(0,1).equals(firstWordToReverseThenCapitalize.substring(0, 1).toLowerCase()))
+//            {
+//                return firstWordToReverseThenCapitalize.substring(0, 1).toUpperCase() + suffix;
+//
+//            }
+//        }
+//
+//        return null;
+//    }
 
 
     /**
@@ -84,8 +114,12 @@ public class StringUtils {
      */
     public static String removeCharacterAtIndex(String str, int index)
     {
-        String firstHalf = str.substring(0, index).toString();
-        String secondHalf = str.substring(index + 1, str.length()).toString();
+        //String firstHalf = str.substring(0, index).toString();
+        //String secondHalf = str.substring(index + 1, str.length()).toString();
+
+        String firstHalf = str.substring(0, index);
+        String secondHalf = str.substring(index + 1, str.length());
+
 
         return firstHalf + secondHalf;
 

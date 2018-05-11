@@ -11,12 +11,12 @@ public class ArrayUtilsTest {
     @Test
     public void getNumberOfOccurrencesTest1() {
         // Given
-        Integer valueToEvaluate = 7;
-        Integer expected = 3;
-        Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
+        Object valueToEvaluate = 7;
+        Object expected = 3;
+        Object[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
 
         // When
-        Integer actual = ArrayUtils.getNumberOfOccurrences(inputArray, valueToEvaluate);
+        Object actual = ArrayUtils.getNumberOfOccurrences(inputArray, valueToEvaluate);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -40,11 +40,11 @@ public class ArrayUtilsTest {
     @Test
     public void getMostCommonTest() {
         // Given
-        Integer expected = 7;
-        Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
+        Object expected = 7;
+        Object[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
 
         // When
-        Integer actual = (Integer) ArrayUtils.getMostCommon(inputArray);
+        Object actual = ArrayUtils.getMostCommon(inputArray);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -57,7 +57,7 @@ public class ArrayUtilsTest {
         Integer[] inputArray = {1,1,2,3,3,3,4,4,4,4};
 
         // When
-        Integer actual = (Integer) ArrayUtils.getLeastCommon(inputArray);
+        Object actual = ArrayUtils.getLeastCommon(inputArray);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -71,7 +71,7 @@ public class ArrayUtilsTest {
         Integer[] expected = {1,1,1,2,2,2,3,3,3,4,4,4};
 
         // When
-        Integer[] actual = (Integer[]) ArrayUtils.mergeArrays(array1, array2);
+        Integer[] actual =  ArrayUtils.mergeArrays(array1, array2);
 
         // Then
         UnitTestingUtils.assertArrayEquality(expected, actual);

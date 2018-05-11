@@ -7,6 +7,8 @@ import org.junit.Test;
  * Created by leon on 2/16/18.
  */
 public class CatTest {
+
+//4-------------------------------------------------------------------------------
     @Test
     public void nullaryConstructorTest() {
         // Given
@@ -26,6 +28,10 @@ public class CatTest {
         Assert.assertEquals(expectedName, actualName);
         Assert.assertEquals(expectedOwner, actualOwner);
     }
+//4--------------------------------------------------------------------------
+
+
+//3-------------------------------------------------------------------------------
 
     @Test
     public void constructorWithNameTest() {
@@ -43,8 +49,10 @@ public class CatTest {
         Assert.assertEquals(expectedAge, actualAge);
         Assert.assertEquals(expectedName, actualName);
     }
+//3----------------------------------------------------------------------------------
 
 
+//2-----------------------------------------------------------------------------------
     @Test
     public void constructorWithAgeTest() {
         // Given
@@ -61,7 +69,10 @@ public class CatTest {
         Assert.assertEquals(expectedAge, actualAge);
         Assert.assertEquals(expectedName, actualName);
     }
+//2-----------------------------------------------------------------------------------
 
+
+//1---------------------------------------------------------------------------------
     @Test
     public void constructorWithNameAndAgeTest() {
         // Given
@@ -78,7 +89,10 @@ public class CatTest {
         Assert.assertEquals(expectedAge, actualAge);
         Assert.assertEquals(expectedName, actualName);
     }
+//1-----------------------------------------------------------------------------------
 
+
+//5------------------------------------------------------------------------------------
     @Test
     public void speakTest() {
         // Given
@@ -91,4 +105,6 @@ public class CatTest {
         // Then
         Assert.assertEquals(expected, actual);
     }
+//5-------------------------------------------------------------------------------------
+
 }

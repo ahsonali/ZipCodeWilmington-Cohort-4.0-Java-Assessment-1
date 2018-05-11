@@ -29,7 +29,9 @@ public class BasicArrayUtils {
      * @param stringArray an array of String objects
      * @return the last element in the array
      */
-    public static String getLastElement(String[] stringArray) {
+    public static String getLastElement(String[] stringArray)
+    {
+
         return stringArray[stringArray.length - 1];
     }
 
